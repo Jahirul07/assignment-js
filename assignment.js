@@ -24,29 +24,34 @@ console.log(budgetCalculator(3, 4, 7));
 function hotelCost(daySpend) {
 
     var Days = 0;
-    if (daySpend >= 10) {
-        Days = daySpend * 100;
+    if (daySpend <= 10) {
+        var firstPartCost = daySpend * 100;
+        
     }
-    else if (daySpend >= 20) {
-        var firstPart = 10 * 100;
-        var remaining = daySpend - 10;
-        var secondPart = remaining * 80;
-        Days = firstPart + secondPart;
+    else if (daySpend <= 20) {
+        var firstPartCost = 10 * 100;
+        var discount = daySpend - 10;
+        var secondPartCost = discount * 80;
+        Days = firstPartCost + secondPartCost;
     }
     else {
         var firstPart = 10 * 100;
         var secondPart = 10 * 80;
-        var remaining = daySpend - 20;
-        var thirtPart = remaining * 50;
-        Days = firstPart + secondPart + thirtPart;
+        var discount = daySpend - 20;
+        var thirtPartCost = discount * 50;
+        Days = firstPartCost + secondPartCost + thirtPartCost;
 
     }
     return Days;
 }
-var count = hotelCost(25);
+var count = hotelCost(15);
 console.log(count);
 
+// ----megaFriend----
 
+function megaFriend() {
+    
+}
 
 
  
